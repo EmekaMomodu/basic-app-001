@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: basic-app-001
+  name: basic-app-001
+  namespace: default 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: basic-app-001
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: basic-app-001
+    spec:
+      containers:
+      - image: emekamomodu/basic-app-001:v1.0.0
+        imagePullPolicy: IfNotPresent
+        name: basic-app-001
+        resources:
+          requests:
+            cpu: 50m
+            memory: 256Mi
