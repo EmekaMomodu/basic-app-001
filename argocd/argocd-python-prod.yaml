@@ -11,7 +11,7 @@ spec:
   source:
     helm:
       valuesFiles:
-        - values.yaml
+        - values-prod.yaml
     path: helm
     repoURL: https://github.com/EmekaMomodu/basic-app-001
     targetRevision: HEAD

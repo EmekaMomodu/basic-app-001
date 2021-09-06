@@ -1,0 +1,10 @@
+apiVersion: v1
+name: basic-app-001
+description: Install a Python HelloWorld deployment
+keywords:
+- basic
+- app
+version: 1.0.0
+maintainers:
+- name: emeka
+  email: emeka.momodu@gmail.com
